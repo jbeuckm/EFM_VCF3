@@ -14422,6 +14422,60 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 </deviceset>
 </devicesets>
 </library>
+<library name="solpad">
+<description>&lt;b&gt;Solder Pads/Test Points&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="LSP10">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.0 mm</description>
+<wire x1="-1.27" y1="0.254" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="0.254" x2="0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="-0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="-0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="-0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<pad name="MP" x="0" y="0" drill="1.016" diameter="2.159" shape="octagon"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.254" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LSP">
+<wire x1="-1.016" y1="2.032" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="0" x2="1.016" y2="2.032" width="0.254" layer="94"/>
+<circle x="0" y="1.016" radius="1.016" width="0.4064" layer="94"/>
+<text x="-1.27" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<pin name="MP" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LSP10" prefix="LSP">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt; drill 1.0 mm, distributor Buerklin, 12H555</description>
+<gates>
+<gate name="1" symbol="LSP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LSP10">
+<connects>
+<connect gate="1" pin="MP" pad="MP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14488,8 +14542,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="P+7" library="supply1" deviceset="+12V" device=""/>
 <part name="P-8" library="supply1" deviceset="-12V" device=""/>
 <part name="LP_OUT" library="erthenvar" deviceset="AUDIO-JACK" device=""/>
-<part name="BP_OUT" library="erthenvar" deviceset="AUDIO-JACK" device=""/>
-<part name="HP_OUT" library="erthenvar" deviceset="AUDIO-JACK" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="CV_1" library="erthenvar" deviceset="AUDIO-JACK" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
@@ -14506,6 +14558,10 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="R7" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="SCALE_TRIM" library="rcl" deviceset="R-TRIMM" device="64W" value="10k"/>
+<part name="HP_OUT" library="solpad" deviceset="LSP10" device=""/>
+<part name="HP_GND" library="solpad" deviceset="LSP10" device=""/>
+<part name="BP_OUT" library="solpad" deviceset="LSP10" device=""/>
+<part name="BP_GND" library="solpad" deviceset="LSP10" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14576,8 +14632,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="P+7" gate="1" x="93.98" y="52.832"/>
 <instance part="P-8" gate="1" x="93.98" y="24.384"/>
 <instance part="LP_OUT" gate="G$1" x="175.26" y="101.6" rot="R180"/>
-<instance part="BP_OUT" gate="G$1" x="175.26" y="116.84" rot="R180"/>
-<instance part="HP_OUT" gate="G$1" x="175.26" y="132.08" rot="R180"/>
 <instance part="GND2" gate="1" x="162.56" y="83.82"/>
 <instance part="CV_1" gate="G$1" x="-68.58" y="22.86" rot="MR180"/>
 <instance part="GND13" gate="1" x="-58.42" y="5.08"/>
@@ -14594,6 +14648,10 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="R7" gate="G$1" x="88.9" y="81.28" rot="R270"/>
 <instance part="R22" gate="G$1" x="2.54" y="81.28" rot="R270"/>
 <instance part="SCALE_TRIM" gate="G$1" x="22.86" y="10.16" rot="MR0"/>
+<instance part="HP_OUT" gate="1" x="170.18" y="137.16" rot="R270"/>
+<instance part="HP_GND" gate="1" x="170.18" y="129.54" rot="R270"/>
+<instance part="BP_OUT" gate="1" x="170.18" y="121.92" rot="R270"/>
+<instance part="BP_GND" gate="1" x="170.18" y="114.3" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -14664,16 +14722,16 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="162.56" y1="86.36" x2="162.56" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="HP_OUT" gate="G$1" pin="RING"/>
 <wire x1="162.56" y1="99.06" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="114.3" x2="162.56" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="129.54" x2="167.64" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="BP_OUT" gate="G$1" pin="RING"/>
 <wire x1="167.64" y1="114.3" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
 <junction x="162.56" y="114.3"/>
 <pinref part="LP_OUT" gate="G$1" pin="RING"/>
 <wire x1="167.64" y1="99.06" x2="162.56" y2="99.06" width="0.1524" layer="91"/>
 <junction x="162.56" y="99.06"/>
+<pinref part="HP_GND" gate="1" pin="MP"/>
+<pinref part="BP_GND" gate="1" pin="MP"/>
 </segment>
 <segment>
 <pinref part="GND13" gate="1" pin="GND"/>
@@ -14966,7 +15024,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <net name="N$15" class="0">
 <segment>
 <pinref part="IC2" gate="C" pin="OUT"/>
-<pinref part="BP_OUT" gate="G$1" pin="TIP"/>
 <wire x1="167.64" y1="121.92" x2="160.02" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="C" pin="-IN"/>
 <wire x1="160.02" y1="121.92" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
@@ -14974,12 +15031,12 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="142.24" y1="114.3" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="114.3" x2="160.02" y2="121.92" width="0.1524" layer="91"/>
 <junction x="160.02" y="121.92"/>
+<pinref part="BP_OUT" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <pinref part="IC2" gate="B" pin="OUT"/>
-<pinref part="HP_OUT" gate="G$1" pin="TIP"/>
 <wire x1="167.64" y1="137.16" x2="160.02" y2="137.16" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="B" pin="-IN"/>
 <wire x1="160.02" y1="137.16" x2="157.48" y2="137.16" width="0.1524" layer="91"/>
@@ -14987,6 +15044,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="142.24" y1="129.54" x2="160.02" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="129.54" x2="160.02" y2="137.16" width="0.1524" layer="91"/>
 <junction x="160.02" y="137.16"/>
+<pinref part="HP_OUT" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$18" class="0">

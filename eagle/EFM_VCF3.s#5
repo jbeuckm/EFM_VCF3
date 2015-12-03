@@ -14505,7 +14505,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="R21" library="rcl" deviceset="R-US_" device="0207/7" value="100k"/>
 <part name="R7" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="R22" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
-<part name="SCALE_TRIM" library="rcl" deviceset="R-TRIMM" device="64W" value="100k"/>
+<part name="SCALE_TRIM" library="rcl" deviceset="R-TRIMM" device="64W" value="10k"/>
 </parts>
 <sheets>
 <sheet>
