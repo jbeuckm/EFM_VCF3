@@ -15018,7 +15018,6 @@ drill 1.0 mm</description>
 <net name="N$26" class="0">
 <segment>
 <pinref part="R21" gate="G$1" pin="2"/>
-<wire x1="-71.12" y1="101.6" x2="-73.66" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="71.12" x2="-68.58" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-68.58" y1="71.12" x2="-68.58" y2="101.6" width="0.1524" layer="91"/>
