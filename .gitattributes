@@ -1,0 +1,3 @@
+*.sch linguist-language=Eagle
+*.brd linguist-language=Eagle
+*.nc linguist-language=G-Code
