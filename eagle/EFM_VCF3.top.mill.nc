@@ -4,7 +4,7 @@
 (This file generated from the board:)
 (.../eurorack/EFM_VCF3/eagle/EFM_VCF3.brd)
 (Current profile is .../pcbgcode.repo/profiles/mach.pp  )
-(This file generated 12/6/15 8:44 PM)
+(This file generated 12/6/15 9:07 PM)
 (Settings from pcb-machine.h)
 (spindle on time = 0.0000)
 (spindle speed = 15000.0000)
@@ -38,11 +38,12 @@ G01 X3.9000  Y-0.0350
 G01 X4.0000  Y0.0500  
 G01 X4.0000  Y0.6500  
 G01 X3.7500  Y1.0500  
-G01 X3.7500  Y2.5500  
-G01 X3.0750  Y2.7750  
-G01 X1.8750  Y2.7750  
-G01 X0.6000  Y2.7500  
-G01 X-0.0250 Y2.1250  
+G01 X3.7500  Y2.5600  
+G01 X3.0250  Y2.7750  
+G01 X1.8050  Y2.7750  
+G01 X1.3100  Y2.2900  
+G01 X0.2400  Y2.2000  
+G01 X-0.0250 Y1.8850  
 G01 X-0.0250 Y0.0500  
 G00 Z1.0000  
 M05
