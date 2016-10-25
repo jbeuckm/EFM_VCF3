@@ -1,3 +1,5 @@
 *.job
 .DS_Store
-
+*.lck
+*.s#*
+*.b#*

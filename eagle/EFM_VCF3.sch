@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14781,8 +14781,8 @@ drill 1.0 mm</description>
 <segment>
 <pinref part="U1" gate="G$1" pin="CV"/>
 <wire x1="45.72" y1="33.02" x2="48.26" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="33.02" x2="48.26" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-17.78" x2="-53.34" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="33.02" x2="48.26" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-20.32" x2="-53.34" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="-20.32" x2="-53.34" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="CV_1" gate="G$1" pin="NORM"/>
 <wire x1="-53.34" y1="22.86" x2="-60.96" y2="22.86" width="0.1524" layer="91"/>
